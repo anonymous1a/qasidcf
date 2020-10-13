@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Error 404-Page Not Found</title>
+</head>
+
+<body>
+    <div id="locked" style="display: block;">
+        <div class="container">
+            <h3>Error 404-Page not Found</h3>
+            <input type="date">
+            <form action="javascript:verify()" method="post">
+                <label for="pass">
+                    <h4>Enter magical words</h4>
+                </label> <br>
+                <input type="password" name="pass" id="pass" required autofocus><br>
+                <br>
+                <button type="submit">Enter</button>
+            </form>
+            <p id="incorrect" style="color: red;visibility: hidden;">Incorrect!</p>
+        </div>
+    </div>
+    <!--first of all We have to create an app div -->
+    <div id="body" style="display: none;">
+        <div id="header">
+            <span id="heart"><i class="fas fa-heart"></i></span>
+            <span id="name">Anonymous <br> <span id="status">Tues 13th 10:24</span></span>
+            <span id="down"><a
+                    onclick="document.querySelector('#main').scrollTo(0, document.querySelector('#main').scrollHeight);"><i
+                        class="fas fa-angle-double-down"></i></a></span>
+            <span id="lock"> <a onclick="window.location.reload();"><i class="fas fa-lock"></i></a></span>
+            <span id="del"> <a onclick="deleteMessages()"><i class="fas fa-trash"></i></a></span>
+        </div>
+        <div id="main">
+
+        </div>
+        <div id="msg">
+            <span id="file">
+                <input type="file" name="upload" id="upload" accept="audio/*,video/*,image/*,application/pdf" disabled>
+                <label for="upload" id="label"><i class="fas fa-paperclip"></i></label>
+            </span>
+            <span id="inp"><input type="text" id="input" autofocus></span>
+            <span id="send"><a onclick="sendMessage()"><i class="fas fa-paper-plane"></i></a></span>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <!--our main scripts starts here-->
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
