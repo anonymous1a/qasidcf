@@ -223,4 +223,5 @@ function sendMessage() {
         time: time
     }).key;
     document.querySelector("#input").value = "";
+document.querySelector('#main').scrollTo(0, document.querySelector('#main').scrollHeight);
 }
