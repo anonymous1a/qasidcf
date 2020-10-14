@@ -127,7 +127,7 @@ function home() {
             para.setAttribute("class", "left");
         }
         document.getElementById("main").appendChild(para);
-
+document.querySelector('#main').scrollTo(0, document.querySelector('#main').scrollHeight);
     });
 }
 //updates status before leaving the site
