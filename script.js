@@ -131,7 +131,7 @@ function home() {
     });
 }
 //updates status before leaving the site
-window.addEventListener("beforeunload", function (event) {
+window.addEventListener("unload", function (event) {
     var day;
     switch (d.getDay()) {
         case 0:
