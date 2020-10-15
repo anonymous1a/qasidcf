@@ -72,7 +72,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #main p{
-    width: 12rem;
+    max-width: 12rem;
     word-break: break-all;
     font-weight: 700;
     font-size: larger;
